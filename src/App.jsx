@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { fetchContacts } from './redux/contactsOps';
-import ContactsForm from './components/ContactsForm';
+import ContactForm from './components/ContactForm';
 import ContactList from './components/ContactList';
 import SearchBox from './components/SearchBox';
 
@@ -16,7 +16,7 @@ const App = () => {
   return (
     <div>
       <h1>Phonebook</h1>
-      <ContactsForm />
+      <ContactForm />
       <h2>Contacts</h2>
       <SearchBox />
       <ContactList />

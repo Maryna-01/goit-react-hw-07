@@ -1,4 +1,3 @@
-// redux/filtersSlice.js
 import {
     createSlice
 } from "@reduxjs/toolkit";
@@ -6,11 +5,11 @@ import {
 const filtersSlice = createSlice({
     name: "filters",
     initialState: {
-        name: "", // текст пошуку
+        name: "",
     },
     reducers: {
         changeFilter: (state, action) => {
-            state.name = action.payload; // оновлює текст фільтру при введенні користувачем
+            state.name = action.payload;
         },
     },
 });
@@ -18,6 +17,6 @@ const filtersSlice = createSlice({
 export const {
     changeFilter
 } = filtersSlice.actions;
-export const selectNameFilter = (state) => state.filters.name; // селектор для доступу до стану фільтра
+export const selectNameFilter = (state) => state.filters.name;
 
-export default filtersSlice.reducer; // експорт редюсера
+export default filtersSlice.reducer;
